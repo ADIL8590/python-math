@@ -1,4 +1,4 @@
-#Fibonacci sequence using recursion code1
+#Fibonacci number in fib-sequence using recursion code1
 def fibonacci(n):
     if (n==0):
         return 0
@@ -32,7 +32,7 @@ def fibonacci_ifelse(n):
             fib_seq.append(next_fib)
         return fib_seq
 print (fibonacci_ifelse(7))
-#Fibonacci sequence using memoization code4
+#Fibonacci number in fib-sequence using memoization code4
 def fibonacci_memo(n, memo={}):
     if n in memo:
         return memo[n]
