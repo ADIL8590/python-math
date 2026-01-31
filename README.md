@@ -97,5 +97,6 @@ This repository is shared for educational use. If you have a preferred license, 
 ADIL MUKHTAR SHAH  
 Mathematics Teacher — 17+ years experience  
 GitHub: [ADIL8590](https://github.com/ADIL8590)  
-Email: (add your email here)
+Email: (mash8851@gmail.com)
+
 
