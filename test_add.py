@@ -1,12 +1,20 @@
 # sum of numbers
-def addition(a,b):
-    return a+b
-def test_addition_basic(a,b):
-    assert addition(2,3)==5
-    assert addition(-1,1)==0
-    assert addition(0,0)==0
-if __name__=="__main__":
-    print(addition(2,3))
+def addition(a, b):
+    """Return the sum of a and b."""
+    return a + b
+
+import unittest
+
+class TestAddition(unittest.TestCase):
+    def test_basic(self):
+        self.assertEqual(addition(2, 3), 5)
+        self.assertEqual(addition(-1, 1), 0)
+        self.assertEqual(addition(0, 0), 0)
+
+if __name__ == "__main__":
+    # Run the tests
+    unittest.main()
+
 
 
 
