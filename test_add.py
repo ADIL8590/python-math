@@ -2,7 +2,8 @@
 def addition(a,b):
     return a+b
 
-addition(2,3)
+print(addition(2,3))
+
 
 
 
