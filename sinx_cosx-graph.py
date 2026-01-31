@@ -1,5 +1,4 @@
 import matplotlib
-matplotlib.use('Agg')   # use non-interactive backend so it runs in headless environments
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,7 +13,4 @@ plt.ylabel('sin(x) and cos(x)')
 plt.title('Plot of sin(x) and cos(x) from 0 to 4π')
 plt.legend(['sin(x)', 'cos(x)'])
 plt.show()
-
-plt.tight_layout()
-plt.savefig('graph.png')  # save output file instead of showing on screen
-plt.close()
+plt.savefig('sinx_cosx_graph.png')  # save the figure to a file
