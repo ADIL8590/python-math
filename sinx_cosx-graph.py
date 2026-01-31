@@ -15,6 +15,3 @@ plt.ylabel('sin(x) and cos (x) ')
 plt.title(' Plot of sin(x) and cos(x) from 0 to 4pi')
 plt.legend(['sin(x)', 'cos(x)'])
 plt.show()
-
-
-plt.show()
