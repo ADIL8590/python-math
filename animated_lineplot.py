@@ -1,7 +1,6 @@
 # plot animated line
 from random import randint
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 from matplotlib.animation import FuncAnimation
 #create empty data list
 x = []
