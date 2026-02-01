@@ -1,6 +1,6 @@
 
 # sum of numbers
-import numpy as np
+import unittest
 def addition(a,b):
     return a+b
 
@@ -10,8 +10,6 @@ print(addition(2,3))  # Expected output:
 def addition(a, b):
     """Return the sum of a and b."""
     return a + b
-
-import unittest
 
 class TestAddition(unittest.TestCase):
     def test_basic(self):

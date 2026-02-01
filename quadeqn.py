@@ -1,3 +1,5 @@
+import numpy as np
+import matplotlib.pyplot as plt
 def cal_roots_poly(a,b,c):
     a= int(a)
     b= int(b)
@@ -17,8 +19,7 @@ def cal_roots_poly(a,b,c):
 # Example usage
 cal_roots_poly(1,-3,2)
 # plot graph of quadratic equation  y=ax**2+bx+c on y_axis against x values on x-axis
-import numpy as np
-import matplotlib.pyplot as plt
+
 def plot_quadratic(a, b, c, x_range):
     """
     Plot the quadratic function y = ax^2 + bx + c over the specified x range.

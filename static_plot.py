@@ -12,4 +12,4 @@ ax.set_ylabel('Temperature (°F)')
 ax.set_title('Temperature Over 11 Days')
 #save and show plot
 plt.savefig('temperature_plot.png')
-plt.show()
+plt.show() 
