@@ -1,7 +1,6 @@
 # plot an ellipse for ellipse_plot.py
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
-import numpy as np
 # function to draw an ellipse
 def draw_ellipse(ax, center, width, height, angle, color): #draw ellipse function given center,width,height,angle and color
     ellipse = Ellipse(center, width, height, angle=angle, color=color, fill=False, linewidth=1)
