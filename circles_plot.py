@@ -1,6 +1,5 @@
 # plot a cicle for circles_plot.py
 import matplotlib.pyplot as plt
-import numpy as np
 # function to draw a circle
 center = tuple(map(float, input("Enter the center coordinates as x,y: ").split(',')))
 radius = float(input("Enter the radius of the circle: "))
