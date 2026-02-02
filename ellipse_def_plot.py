@@ -17,7 +17,7 @@ ax.set_aspect('equal')
 # Set limits
 ax.set_xlim(-10, 10)
 ax.set_ylim(-10, 10)
-# Plot ellipse with a=8, b=4
+# Plot ellipse with a and b from user input
 plot_ellipse(a, b, ax)
 # Add labels and title
 ax.set_xlabel('X-axis')
