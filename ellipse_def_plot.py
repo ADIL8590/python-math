@@ -2,6 +2,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 # Function to plot Ellipse
+a = int(input("Enter the value of a: "))
+b = int(input("Enter the value of b: "))
 def plot_ellipse(a, b, ax):
     x = np.linspace(-10, 10, 400)
     y1 = b * np.sqrt(1 - (x**2 / a**2))
@@ -16,7 +18,7 @@ ax.set_aspect('equal')
 ax.set_xlim(-10, 10)
 ax.set_ylim(-10, 10)
 # Plot ellipse with a=8, b=4
-plot_ellipse(8, 4, ax)
+plot_ellipse(a, b, ax)
 # Add labels and title
 ax.set_xlabel('X-axis')
 ax.set_ylabel('Y-axis')
