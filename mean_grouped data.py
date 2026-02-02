@@ -2,7 +2,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from scipy import stats
 # Sample grouped data
 data = {
     'Class Interval': ['0-10', '10-20', '20-30', '30-40', '40-50'],
