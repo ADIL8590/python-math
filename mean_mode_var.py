@@ -58,4 +58,5 @@ coefficient_of_variation = (std_dev / mean) * 100
 print(f'Coefficient of Variation of the grouped data: {coefficient_of_variation:.2f}%')
 # Display the DataFrame with midpoints
 print(df)
-# End of the code)
+#save the DataFrame to a CSV file
+df.to_csv('grouped_data_with_midpoints.csv', index=False)
