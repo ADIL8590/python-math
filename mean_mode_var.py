@@ -60,3 +60,5 @@ print(f'Coefficient of Variation of the grouped data: {coefficient_of_variation:
 print(df)
 #save the DataFrame to a CSV file
 df.to_csv('grouped_data_with_midpoints.csv', index=False)
+#save graph
+plt.savefig('bar_graph.png')
