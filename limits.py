@@ -1,4 +1,6 @@
 #finding  limits of a function using user defined function
+import numpy as np
+import matplotlib.pyplot as plt
 def find_limit(func, x, approach):
     if approach == 'left':
         return func(x - 0.0001)  # Approaching from the left
@@ -30,8 +32,7 @@ if __name__ == "__main__":
 
 
 #plot function to visualize limits  
-import numpy as np
-import matplotlib.pyplot as plt
+
 x_vals = np.linspace(0.5, 1.5, 100)
 y_vals = [function(x) for x in x_vals]
 plt.plot(x_vals, y_vals, label='f(x)')
