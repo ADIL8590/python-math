@@ -1,4 +1,5 @@
 # area of trianlgle whose three coordinates are given by user
+import matplotlib.pyplot as plt
 x1 = float(input("Enter x-coordinate of first point: "))
 y1 = float(input("Enter y-coordinate of first point: "))
 x2 = float(input("Enter x-coordinate of second point: "))
@@ -12,7 +13,7 @@ def area_of_triangle(x1, y1, x2, y2, x3, y3):
 area = area_of_triangle(x1, y1, x2, y2, x3, y3)
 print(f"The area of the triangle formed by the points ({x1}, {y1}), ({x2}, {y2}), and ({x3}, {y3}) is: {area} square units.")
 # plotting the triangle
-import matplotlib.pyplot as plt
+
 plt.plot([x1, x2, x3, x1], [y1, y2, y3, y1], 'b-')
 plt.scatter([x1, x2, x3], [y1, y2, y3], color='red')
 plt.title("Triangle formed by the given points")
