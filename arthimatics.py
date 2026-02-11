@@ -13,4 +13,4 @@ sum_result, difference_result, product_result, quotient_result = arthimatics(a, 
 print(f"Sum of {a} and {b}: {sum_result}")
 print(f"Difference of {a} and {b}: {difference_result}")
 print(f"Product of {a} and {b}: {product_result}")
-print(f"Quotient of {a} and {b}: {quotient_resultm}")
+print(f"Quotient of {a} and {b}: {quotient_result}")
