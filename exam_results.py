@@ -16,7 +16,7 @@ students = [
     students_list("Frank", 106, Math=45, English=50, Science=40, History=42, Geography=48),
     students_list("Grace", 107, Math=70, English=75, Science=65, History=68, Geography=72),
     students_list("Henry", 108, Math=55, English=60, Science=50, History=52, Geography=58),
-    
+
 
 ]
 
@@ -26,7 +26,7 @@ def print_student_result(student):
     print(f"Student: {student['name']}, Roll Number: {student['roll_number']}, Class: {student['class']}")
     print(f"Marks: {student['marks']}")
     print(f"Total Marks: {total_marks} out of {len(student['marks']) * 100}")
-    print(f"Average Marks: {average_marks:.2f}")
+    print(f"Marks Percentage: {average_marks:.2f}%")
     if average_marks >= 90:
         print("Result: Passed with Distinction")
     elif average_marks >= 60 and average_marks < 90:
