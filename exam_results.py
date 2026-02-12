@@ -16,6 +16,9 @@ students = [
     students_list("Frank", 106, Math=45, English=50, Science=40, History=42, Geography=48),
     students_list("Grace", 107, Math=70, English=75, Science=65, History=68, Geography=72),
     students_list("Henry", 108, Math=55, English=60, Science=50, History=52, Geography=58),
+    students_list("jacky", 109, Math=95, English=60, Science=60, History=58, Geography=68),
+    students_list("Henry", 110, Math=65, English=60, Science=70, History=59, Geography=78),
+    students_list("Henry", 111, Math=85, English=60, Science=80, History=55, Geography=88),
 
 
 ]
@@ -48,11 +51,23 @@ def find_student_by_roll(roll_number):
             return student
     return None
 
+
+#if there are multiple students with the same name, we can return a list of students instead of just one. Here's an updated version of the find_student_by_name function:
 def find_student_by_name(name):
+    matching_students = []
     for student in students:
         if student["name"].lower() == name.lower():
-            return student
-    return None
+            matching_students.append(student)
+    return matching_students if matching_students else None
+#Now, if there are multiple students with the same name, the function will return a list of matching students. If no students are found, it will return None.
+def print_students_results(students):
+    for student in students:
+        print_student_result(student)
+
+
+     
+
+
 
 # Get user input
 user_input = input("Enter your roll number or name: ")
@@ -61,6 +76,10 @@ user_input = input("Enter your roll number or name: ")
 student = find_student_by_roll(int(user_input)) if user_input.isdigit() else find_student_by_name(user_input)
 
 if student:
-    print_student_result(student)
+    if isinstance(student, list):
+        print_students_results(student)
+    else:
+        print_student_result(student)
 else:
     print("Student not found.")
+
