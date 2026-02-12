@@ -8,42 +8,66 @@ def students_list( Name, Roll_Number,School="GHSS SOGAM" , Class="11th", **Marks
         "marks": {subject: int(mark) for subject, mark in Marks.items()}
     }
 students = [
-    students_list("Alice", 101, Math=85, English=90, Science=78, History=88, Geography=92),
-    students_list("Bob", 102, Math=75, English=80, Science=70, History=65, Geography=72),
-    students_list("Charlie", 103, Math=95, English=92, Science=88, History=90, Geography=94),
-    students_list("David", 104, Math=60, English=65, Science=55, History=58, Geography=62),
-    students_list("Eve", 105, Math=82, English=88, Science=80, History=85, Geography=90),
-    students_list("Frank", 106, Math=45, English=50, Science=40, History=42, Geography=48),
-    students_list("Grace", 107, Math=70, English=75, Science=65, History=68, Geography=72),
-    students_list("Henry", 108, Math=55, English=60, Science=50, History=52, Geography=58),
-    students_list("jacky", 109, Math=95, English=60, Science=60, History=58, Geography=68),
-    students_list("Henry", 110, Math=65, English=60, Science=70, History=59, Geography=78),
-    students_list("Henry", 111, Math=85, English=60, Science=80, History=55, Geography=88),
+    students_list("Alice", 101, Math=85, English=90, Physics=78, Chemistry=88, Biology=92),
+    students_list("Bob", 102, Math=75, English=80, Physics=70, Chemistry=65, Biology=72),
+    students_list("Charlie", 103, Math=95, English=92, Physics=88, Chemistry=90, Biology=94),
+    students_list("David", 104, Math=60, English=65, Physics=55, Chemistry=58, Biology=62),
+    students_list("Eve", 105, Math=82, English=88, Physics=80, Chemistry=85, Biology=90),
+    students_list("Frank", 106, Math=45, English=50, Physics=40, Chemistry=42, Biology=48),
+    students_list("Grace", 107, Math=70, English=75, Physics=65, Chemistry=68, Biology=72),
+    students_list("Henry", 108, Math=55, English=60, Physics=50, Chemistry=52, Biology=58),
+    students_list("jacky", 109, Math=95, English=60, Physics=60, Chemistry=58, Biology=68),
+    students_list("Henry", 110, Math=65, English=60, Physics=70, Chemistry=59, Biology=78),
+    students_list("Henry", 111, Math=85, English=60, Physics=80, Chemistry=55, Biology=88),
+    students_list("Henry", 112, Math=85, English=60, Science=80, History=55, Geography=88),
+    students_list("Henry", 113, Math=85, English=60, Science=80, History=55, Geography=88),
+    students_list("Mogli", 114, Math=45, English=30, Science=40, History=35, Geography=28),
+    students_list("Mooz", 115, Math=25, English=30, Science=39, History=35, Geography=28),
 
 
 ]
 
 def print_student_result(student):
+    failed_subjects = [subject for subject, mark in student['marks'].items() if int(mark) < 40]
     total_marks = sum(int(mark) for mark in student["marks"].values())
     average_marks = total_marks / len(student["marks"])
-    print(f"School Name:{student["school"]}")
-    print(f"Student: {student["name"]}")
-    print (f"Roll Number :{student["roll_number"]}")
+    print(f"School Name:{student['school']}")
+    print(f"Student: {student['name']}")
+    print (f"Roll Number :{student['roll_number']}")
     print(f"Class: {student ['class']}")
-    print(f"Marks: {student['marks']}")
-    print(f"Total Marks: {total_marks} out of {len(student['marks']) * 100}")
-    print(f"Marks Percentage: {average_marks:.2f}%")
-    if average_marks >= 90:
-        print("Result: Passed with Distinction")
-    elif average_marks >= 60 and average_marks < 90:
-        print("Result: Passed with First Class")
-    elif average_marks >= 50 and average_marks < 60:
-        print("Result: Passed with Second Class")
-    elif average_marks >= 40 and average_marks < 50:
-        print("Result: Passed with Third Class")
+    
+    if len(failed_subjects) >= 1 and len(failed_subjects) < 5:
+        print("Overall Result: Re-appear")
+        print(f"Failed Subjects: {', '.join(failed_subjects)} with marks: {', '.join(str(student['marks'][subject]) for subject in failed_subjects)} respectively")
+        return
+        
+    elif len(failed_subjects) == 5:
+        print("Overall Result: Failed")
+        print(f"Failed Subjects: {', '.join(failed_subjects)} with marks: {', '.join(str(student['marks'][subject]) for subject in failed_subjects)} respectively")
+        return
     else:
-        print("Result: Failed")
-    print("-" * 40)
+       print("Subject-wise Results:")
+    for subject, mark in student['marks'].items():
+            if int(mark) >= 40:
+                print(f"  {subject}:  ({mark})     Passed")
+            else:
+                print(f"  {subject}:  ({mark})     Failed")
+
+    #print(f"Marks:{student['marks']}")     Note: alternative to print subject-wise results
+    print(f"Total Marks Obetained : {total_marks} out of {len(student['marks']) * 100}")
+    print(f"Marks Percentage: {average_marks:.2f}%")
+    # add grading system
+     
+    if average_marks >= 90:
+            print("Result: Passed with Distinction")
+    elif average_marks >= 60 and average_marks < 90:
+            print("Result: Passed with First Class")
+    elif average_marks >= 50 and average_marks < 60:
+          print("Result: Passed with Second Class")
+    else:
+         print("Result: Passed with Third Class")
+         
+        
 
 def find_student_by_roll(roll_number):
     for student in students:
