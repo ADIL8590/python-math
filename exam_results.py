@@ -23,7 +23,10 @@ students = [
 def print_student_result(student):
     total_marks = sum(int(mark) for mark in student["marks"].values())
     average_marks = total_marks / len(student["marks"])
-    print(f"Student: {student['name']}, Roll Number: {student['roll_number']}, Class: {student['class']}")
+    print(f"School Name:{student["school"]}")
+    print(f"Student: {student["name"]}")
+    print (f"Roll Number :{student["roll_number"]}")
+    print(f"Class: {student ['class']}")
     print(f"Marks: {student['marks']}")
     print(f"Total Marks: {total_marks} out of {len(student['marks']) * 100}")
     print(f"Marks Percentage: {average_marks:.2f}%")
