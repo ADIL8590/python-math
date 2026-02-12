@@ -68,14 +68,11 @@ def print_student_result(student):
          print("Result: Passed with Third Class")
          
         
-
 def find_student_by_roll(roll_number):
     for student in students:
         if student["roll_number"] == roll_number:
             return student
     return None
-
-
 #if there are multiple students with the same name, we can return a list of students instead of just one. Here's an updated version of the find_student_by_name function:
 def find_student_by_name(name):
     matching_students = []
@@ -87,12 +84,6 @@ def find_student_by_name(name):
 def print_students_results(students):
     for student in students:
         print_student_result(student)
-
-
-     
-
-
-
 # Get user input
 user_input = input("Enter your roll number or name: ")
 
