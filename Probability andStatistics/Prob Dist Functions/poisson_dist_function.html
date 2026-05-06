@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poisson Distribution Function</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Poisson Distribution Function</h1>
+    <h2>Probability Distribution Function</h2>
+    <p>A probability distribution function (PDF) is a mathematical function that describes the likelihood of a random variable taking on a particular value. It provides a way to model and analyze the behavior of random phenomena. The PDF is defined for continuous random variables and is used to calculate probabilities for specific intervals.</p>
+    <p>In contrast, a probability mass function (PMF) is used for discrete random variables and assigns probabilities to specific values. The PMF is defined for discrete random variables and is used to calculate probabilities for specific values.</p>
+    <p>The main examples of probability mass functions include the Poisson distribution, which is used for modeling the number of events in a fixed interval, and the binomial distribution, which is used for modeling the number of successes in a fixed number of trials.</p>
+    <p>In this lecture, we will focus on the Poisson distribution, which is a discrete probability distribution that describes the number of events occurring within a fixed interval of time or space, given that the events occur with a known constant mean rate and independently of the time since the last event. The Poisson distribution is often used to model rare events, such as the number of phone calls received at a call center in an hour or the number of accidents occurring at a traffic intersection in a day.</p>
+    <h2>Poisson Distribution Function</h2>
+    <p>The Poisson distribution is a discrete probability distribution that describes the number of events occurring within a fixed interval of time or space, given that the events occur with a known constant mean rate and independently of the time since the last event. The Poisson distribution is often used to model rare events, such as the number of phone calls received at a call center in an hour or the number of accidents occurring at a traffic intersection in a day.</p>
+    <pre>
+        P(X = k) = (λ^k * e^(-λ)) / k!
+    </pre>
+
+    <p>In this formula, k represents the number of events, λ represents the average rate of occurrence, e is the base of the natural logarithm, and k! is the factorial of k. The Poisson distribution is widely used in various fields, including statistics, engineering, and natural sciences, to model and analyze count data.</p>
+    
+    <h2>Properties of Poisson Distribution</h2>
+    <ul>
+        <li>The Poisson distribution is defined for non-negative integer values (0, 1, 2, ...).</li>
+        <li>The mean and variance of a Poisson distribution are both equal to λ, where λ is the average rate of occurrence.</li>
+        <li>The probability mass function (PMF) of a Poisson distribution is given by:</li>
+    </ul>
+
+    
+    <pre>
+        <ol>
+            <li>Example1: If a call center receives an average of 5 calls per hour, the probability of receiving exactly 3 calls in an hour can be calculated using the Poisson distribution formula with λ = 5 and k = 3.
+            P(X = 3) = (5^3 * e^(-5)) / 3! = (125 * e^(-5)) / 6 ≈ 0.1404</li>
+            <li>Example2: If a traffic intersection experiences an average of 2 accidents per day, the probability of having no accidents in a day can be calculated using the Poisson distribution formula with λ = 2 and k = 0.
+            P(X = 0) = (2^0 * e^(-2)) / 0! = (1 * e^(-2)) / 1 ≈ 0.1353</li>
+            <li>Example3: If a website receives an average of 10 hits per minute, the probability of receiving more than 15 hits in a minute can be calculated using the Poisson distribution formula with λ = 10 and k > 15. This can be calculated as:
+            P(X > 15) = 1 - P(X ≤ 15) = 1 - (P(X = 0) + P(X = 1) + ... + P(X = 15))</li>
+        </ol>
+    </pre>
+    <h2> Mean and Variance</h2>
+    <p>In a Poisson distribution, the mean (λ) and variance are equal. This means that if the average rate of occurrence is λ, then the expected number of events in a given interval is also λ, and the variability around that mean is also λ. This property makes the Poisson distribution unique among probability distributions and allows for straightforward calculations of probabilities and expectations.</p>
+
+    <p>For example, if a call center receives an average of 5 calls per hour, the mean and variance of the number of calls received in an hour would both be 5. This means that on average, we can expect to receive 5 calls per hour, and the variability around that average is also 5.</p>
+    
+    <h2>First Moment (Mean)</h2>
+    <ol>
+        <li>The first moment of a probability distribution is the expected value or mean of the distribution. It provides a measure of the central tendency of the distribution.</li>
+        <li>In the case of a Poisson distribution, the first moment is equal to its parameter λ, which represents the average rate of occurrence.</li>
+    </ol>
+    <h2>Second Moment (Variance)</h2>
+    <ol>
+        <li>The second moment of a probability distribution is the variance, which measures the spread or variability of the distribution around its mean.</li>
+        <li>For a Poisson distribution, the second moment (variance) is also equal to its parameter λ. This means that the variability of the number of events in a given interval is directly related to the average rate of occurrence.</li>
+    </ol>
+
+</body>
+</html>

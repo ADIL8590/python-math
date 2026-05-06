@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability Mass Function</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Probability Mass Function</h1>
+    <p>A probability mass function (PMF) is a mathematical function that describes the probability distribution of a discrete random variable. It assigns probabilities to each possible value of the random variable, indicating the likelihood of each outcome occurring. The PMF is defined for discrete random variables and is used to calculate probabilities for specific values.</p>
+
+    <h2>Properties of Probability Mass Functions</h2>
+    <ul>
+        <li>The PMF is non-negative for all values of the random variable.</li>
+        <li>The sum of the probabilities assigned by the PMF over all possible values of the random variable is equal to 1, which represents the total probability.</li>
+        <li>The probability that a random variable takes on a specific value can be directly obtained from the PMF.</li>
+    </ul>
+
+    <h2>Example: Binomial Distribution</h2>
+    <p>One common example of a probability mass function is the binomial distribution. It models the number of successes in a fixed number of independent Bernoulli trials, where each trial has two possible outcomes: success or failure. The PMF of a binomial distribution is given by:</p>
+    <pre>
+        P(X = k) = (n choose k) * p^k * (1 - p)^(n - k)
+                 OR
+        P(X = k) = (n! / (k! * (n - k)!)) * p^k * (1 - p)^(n - k)
+        Here, (n choose k) is the binomial coefficient, which can be calculated as n! / (k! * (n - k)!), where n is the number of trials and k is the number of successes. The parameter p represents the probability of success on each trial. The binomial distribution is widely used in statistics and various fields to model scenarios involving binary outcomes.</pre>
+           <ul>
+             <li>Let's break down the formula for the PMF of a binomial distribution:</li>
+             <li>n: The total number of independent trials.</li>
+             <li>k: The number of successes we want to calculate the probability for.</li>
+             <li>p: The probability of success on each trial.</li>
+             <li>(n choose k): The binomial coefficient, which represents the number of ways to choose k successes from n trials. It can be calculated using the formula n! / (k! * (n - k)!).</li>
+             <li>p^k: The probability of having k successes.</li>
+             <li>(1 - p)^(n - k): The probability of having (n - k) failures, which is the complement of success.</li>
+           </ul>
+   </pre>
+    <pre>
+        <ol>
+            <li>Example1: If we flip a fair coin 10 times, the probability of getting exactly 3 heads can be calculated using the binomial distribution formula with n = 10, k = 3, and p = 0.5.
+            P(X = 3) = (10 choose 3) * (0.5)^3 * (1 - 0.5)^(10 - 3)
+                     = (10! / (3! * (10 - 3)!)) * (0.5)^3 * (0.5)^7
+                     = (120) * (0.125) * (0.0078125)
+                     ≈ 0.1172</li>
+             <li>Example2: If we flip a fair coin 10 times, the probability of getting exactly 5 heads can be calculated using the binomial distribution formula with n = 10, k = 5, and p = 0.5.
+            P(X = 5) = (10 choose 5) * (0.5)^5 * (1 - 0.5)^(10 - 5)
+                     = (10! / (5! * (10 - 5)!)) * (0.5)^5 * (0.5)^5
+                     = (252) * (0.03125) * (0.03125)
+                     ≈ 0.2461</li>
+             <li>Example3: If we flip a fair coin 10 times, the probability of getting at least 7 heads can be calculated using the binomial distribution formula with n = 10, k ≥ 7, and p = 0.5. This can be calculated as:
+            P(X ≥ 7) = P(X = 7) + P(X = 8) + P(X = 9) + P(X = 10)</li>
+             <li>Example4: If we flip a fair coin 10 times, the probability of getting at most 2 heads can be calculated using the binomial distribution formula with n = 10, k ≤ 2, and p = 0.5. This can be calculated as:
+            P(X ≤ 2) = P(X = 0) + P(X = 1) + P(X = 2)</li>
+            <li>Example5: If we flip a fair coin 10 times, the probability of getting between 3 and 6 heads (inclusive) can be calculated using the binomial distribution formula with n = 10, 3 ≤ k ≤ 6, and p = 0.5. This can be calculated as:
+            P(3 ≤ X ≤ 6) = P(X = 3) + P(X = 4) + P(X = 5) + P(X = 6)</li>
+        </ol>
+    </pre>
+
+    <p>In this formula, n represents the number of trials, k represents the number of successes, p represents the probability of success on an individual trial, and (n choose k) is the binomial coefficient. The binomial distribution is widely used in statistics and various fields to model scenarios involving binary outcomes.</p>
+ <h2>First Moment (Mean)</h2>
+ <ol>
+     <li>The first moment of a probability distribution is the expected value or mean of the distribution. It provides a measure of the central tendency of the distribution.</li>
+     <li>In the case of a binomial distribution, the first moment (mean) is given by n * p, where n is the number of trials and p is the probability of success on each trial.</li>
+ </ol>
+ <h2>Second Moment (Variance)</h2>
+ <ol>
+     <li>The second moment of a probability distribution is the variance, which measures the spread or variability of the distribution around its mean.</li>
+     <li>For a binomial distribution, the second moment (variance) is given by n * p * (1 - p), where n is the number of trials and p is the probability of success on each trial.</li>
+ </ol>
+</body>
+</html>
